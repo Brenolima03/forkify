@@ -36,3 +36,7 @@ To start the development server and run the project locally, use the following c
 
 ```bash
 npm start
+
+git add .
+git commit -m 'refactoring to mvc architecture'
+git push
