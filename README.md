@@ -24,6 +24,13 @@ Make sure you have Node.js and npm installed on your machine. You can download t
     cd forkify
     ```
 
+3. Install the 20.x version of node and npm:
+
+    ```bash
+    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\ sudo apt-get install -y nodejs
+    sudo npm install -g npm
+    ```
+
 3. Install project dependencies using npm:
 
     ```bash
@@ -38,5 +45,5 @@ To start the development server and run the project locally, use the following c
 npm start
 
 git add .
-git commit -m 'rendering error message'
+git commit -m 'search results'
 git push
