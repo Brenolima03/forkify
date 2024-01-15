@@ -38,5 +38,5 @@ To start the development server and run the project locally, use the following c
 npm start
 
 git add .
-git commit -m 'config and helpers'
+git commit -m 'rendering error message'
 git push
