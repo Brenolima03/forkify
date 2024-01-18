@@ -14,7 +14,7 @@ class PaginationView extends View {
             const goToPage  = +btn.dataset.goto;
 
             handler(goToPage);
-        })
+        });
     };
 
     _generateMarkup() {

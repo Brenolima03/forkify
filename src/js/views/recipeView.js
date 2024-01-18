@@ -1,6 +1,6 @@
 import View from "./View";
 import icons from "url:../../img/icons.svg";
-import { Fraction } from "fractional";
+import { Fraction } from 'fractional';
 
 class RecipeView extends View {
 
@@ -67,7 +67,7 @@ class RecipeView extends View {
 					</div>
 				</div>
 	
-				<div class="recipe__user-generated">
+				<div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
 					<svg>
 						<use href="${icons}#icon-user"></use>
 					</svg>
@@ -103,20 +103,21 @@ class RecipeView extends View {
 		`;
 	};
 
-    _generateMarkupIngredient(ingredient){
-        return `
-            <li class="recipe__ingredient">
-                <svg class="recipe__icon">
-                    <use href="${icons}#icon-check"></use>
-                </svg>
-                <div class="recipe__quantity">${ingredient.quantity ?  new Fraction(ingredient.quantity).toString() : ""}</div>
-                <div class="recipe__description">
-                    <span class="recipe__unit">${ingredient.unit}</span>
-                    ${ingredient.description}
-                </div>
-            </li>
-        `;
-    };
+	_generateMarkupIngredient(ingredient) {
+		return `
+			<li class="recipe__ingredient">
+				<svg class="recipe__icon">
+					<use href="${icons}#icon-check"></use>
+				</svg>
+				<div class="recipe__quantity">${ingredient.quantity ? new Fraction(ingredient.quantity).toString() : ''}</div>
+				<div class="recipe__description">
+					<span class="recipe__unit">${ingredient.unit}</span>
+					${ingredient.description}
+				</div>
+			</li>
+		`;
+	};
+	
 
 };
 export default new RecipeView();
