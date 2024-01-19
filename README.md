@@ -45,5 +45,5 @@ To start the development server and run the project locally, use the following c
 npm start
 
 git add .
-git commit -m 'fixing infinite loop spinner when query is null'
+git commit -m 'changing the head of the page for Forkify'
 git push
