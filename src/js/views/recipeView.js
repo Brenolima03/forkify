@@ -104,6 +104,7 @@ class RecipeView extends View {
 	};
 
 	_generateMarkupIngredient(ingredient) {
+		console.log(ingredient.quantity);
 		return `
 			<li class="recipe__ingredient">
 				<svg class="recipe__icon">
@@ -116,6 +117,7 @@ class RecipeView extends View {
 				</div>
 			</li>
 		`;
+		
 	};
 	
 

@@ -73,12 +73,17 @@ export const getSearchResultsPage = function(page=state.search.page) {
 
 export const updateServings = function (newServings) {
     state.recipe.ingredients.forEach(ing => {
-        // newQt = oldQt * newServings / oldServings // 2 * 8 / 4 = 4
-        ing.quantity = ing.quantity * newServings / state.recipe.servings;
+        // Calculate the new quantity
+        const newQuantity = (ing.quantity * newServings) / state.recipe.servings;
+        
+        // Round the new quantity to 2 decimal places
+        ing.quantity = Math.round(newQuantity * 100) / 100;
     });
   
+    // Update the servings in the state
     state.recipe.servings = newServings;
 };
+
 
 const persistBookmarks = function () {
     localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
