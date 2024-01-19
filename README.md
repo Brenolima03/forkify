@@ -45,5 +45,5 @@ To start the development server and run the project locally, use the following c
 npm start
 
 git add .
-git commit -m 'fixing weird fractions'
+git commit -m 'adding number of pages to pagination'
 git push
